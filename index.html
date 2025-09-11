@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Durgesh AI Internship Certificate</title>
+    <title>Durgesh's Internship Certificates</title>
     <style>
-      body { margin: 0; }
-      iframe { width: 100%; height: 100vh; border: none; }
+      body { margin: 0; font-family: Arial, sans-serif; }
+      nav {
+        background-color: #f2f2f2;
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        border-bottom: 1px solid #ccc;
+      }
+      nav a {
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+      }
+      iframe {
+        width: 100%;
+        height: calc(100vh - 50px);
+        border: none;
+      }
     </style>
   </head>
   <body>
-    <iframe src="AI_Internship_YBI_Offer_and_Certificate.pdf"></iframe>
+
+    <nav>
+      <a href="#" onclick="loadCertificate('AI_Internship_YBI_Offer_and_Certificate.pdf')">AI Internship</a>
+      <a href="#" onclick="loadCertificate('DevOps_Internship_Certificate.pdf')">DevOps Internship</a>
+    </nav>
+
+    <iframe id="certFrame" src="AI_Internship_YBI_Offer_and_Certificate.pdf"></iframe>
+
+    <script>
+      function loadCertificate(file) {
+        document.getElementById("certFrame").src = file;
+      }
+    </script>
+
   </body>
 </html>
